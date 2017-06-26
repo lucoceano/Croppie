@@ -1076,6 +1076,8 @@
             url = options.url;
             points = options.points || [];
             zoom = typeof(options.zoom) === 'undefined' ? null : options.zoom;
+            self.options.maxZoom = options.maxZoom || self.options.maxZoom;
+            self.options.minZoomDiference = options.maxZoom || self.options.minZoomDiference;
         }
 
         self.data.bound = false;

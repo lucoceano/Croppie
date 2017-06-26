@@ -47,9 +47,9 @@ var Demo = (function() {
 				height: 300
 			},
 			// url: 'demo/demo-1.jpg',
-			enforceBoundary: false,
-			maxZoom: 1,
-			minZoomDiference: 0
+			enforceBoundary: false
+			// maxZoom: 1,
+			// minZoomDiference: 0
 			// mouseWheelZoom: false
 		});
 		mc.on('update', function (ev, data) {
@@ -83,7 +83,9 @@ var Demo = (function() {
 		});
 		basic.croppie('bind', {
 			url: 'demo/cat.jpg',
-			points: [77,469,280,739]
+			points: [77,469,280,739],
+			maxZoom: 1,
+			minZoomDiference: 0
 		});
 
 		$('.basic-result').on('click', function() {
