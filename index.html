@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang ="en">
     <head>
         <meta charset="UTF-8" >
@@ -56,6 +56,7 @@
 &lt;script&gt;
 $('.demo').croppie({
     url: 'demo/demo-1.jpg',
+    maxZoom: 1.5,
 });
 &lt;/script&gt;
 &lt;!-- or even simpler --&gt;
@@ -76,7 +77,7 @@ $('.my-image').croppie();
                 <pre class="language-javascript" style="width: 225px;"><code class="language-javascript">bower install croppie</code></pre>
                 <p><strong>Download:</strong></p>
                 <p><a href="https://github.com/Foliotek/Croppie/releases">Source</a></p>
-                
+
                 <hr />
                 <p><strong>Then add the following elements to your page:</strong></p>
                 <pre class="language-html"><code class="language-html">&lt;link rel="stylesheet" href="croppie.css" /&gt;
@@ -88,7 +89,7 @@ $('.my-image').croppie();
             <div class="section-header"><h2>Usage</h2></div>
             <div class="container">
                 <p>You can initialize Croppie with the following code:</p>
-                
+
               <pre class="language-javascript"><code class="language-javascript">var c = new Croppie(document.getElementById('item'), opts);
 // call a method
 c.method(args);</code></pre>
@@ -153,7 +154,7 @@ $('#item').croppie(method, args);</code></pre>
                             <strong class="focus">viewport</strong><em>object</em>
                             <p>The inner container of the coppie.  The visible part of the image</p>
                             <span class="default">Default</span>
-                            <code class="language-javascript">{ 
+                            <code class="language-javascript">{
                                 width: 100,
                                 height: 100,
                                 type: 'square'
@@ -178,8 +179,8 @@ $('#item').croppie(method, args);</code></pre>
                             <ul class="parameter-list">
                                 <li><code class="language-javascript">url</code> URL to image</li>
                                 <li><code class="language-javascript">points</code> Array of points that translate into <code class="language-javascript">[topLeftX, topLeftY, bottomRightX, bottomRightY]</code></li>
-                                <code class="language-javascript">zoom</code> Apply zoom after image has been bound 
-                                <li><code class="language-javascript">orientation</code> Custom orientation, applied after exif orientation (if enabled). Only works with 
+                                <code class="language-javascript">zoom</code> Apply zoom after image has been bound
+                                <li><code class="language-javascript">orientation</code> Custom orientation, applied after exif orientation (if enabled). Only works with
                                     <code class="language-javascript">enableOrientation</code> option enabled (see 'Options').
                                     <br />
                                     Valid options are:
@@ -223,7 +224,7 @@ $('#item').croppie(method, args);</code></pre>
                                     <code class="language-javascript">'rawcanvas'</code> returns the canvas element allowing you to manipulate prior to getting the resulted image
                                 </li>
                                 <li>
-                                    <code class="language-javascript">size</code> The size of the cropped image defaults to <code class="language-javascript">'viewport'</code> 
+                                    <code class="language-javascript">size</code> The size of the cropped image defaults to <code class="language-javascript">'viewport'</code>
                                 </li>
                                 <li class="values">
                                     <code class="language-javascript">'viewport'</code> the size of the resulting image will be the same width and height as the viewport
